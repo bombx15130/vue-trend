@@ -1,7 +1,7 @@
 <template>
 <div class="trend-el">
   <div class="winNo-title">
-    <h3>位置走势</h3>
+    <h3>位置走势111</h3>
     <div>
       <!-- 选择期数：
       <select name="" id="" v-model="period" @change="setPeriod(period)">
