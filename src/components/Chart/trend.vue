@@ -2,14 +2,14 @@
 <div class="trend-el">
   <div class="winNo-title">
     <h3>位置走势</h3>
-    <!-- <div>
-      选择期数：
+    <div>
+      <!-- 选择期数：
       <select name="" id="" v-model="period" @change="setPeriod(period)">
         <option value="30">30期</option>
         <option value="60">60期</option>
         <option value="90">90期</option>
-      </select>
-    </div> -->
+      </select> -->
+    </div>
   </div>
 
   <p class="top-description">
@@ -30,7 +30,7 @@
     <div class="filter-group">
       <div class="filter-row" @click="filter">
         <div class="filter-check">
-          <!-- <img src="../../assets/checkbox.png" alt="check" :class="isCheck ? 'check-active' : ''"> -->
+          <img src="../../assets/checkbox.png" alt="check" :class="isCheck ? 'check-active' : ''">
         </div>
         <span>分割线</span>
       </div>
@@ -130,16 +130,13 @@ export default {
       this.currentTab = ball
       // 資料
       const gameData = JSON.parse(JSON.stringify(this.gameData))
-      console.log(gameData)
       const rowLength = this.max - this.min + 1
       const data = []
       // 統計數據陣列
       let missArr = Array(rowLength + 7)
       let countArr = Array(rowLength + 7)
       let maxMiss = Array(rowLength + 7)
-      console.log(gameData.length)
       for (let i = (gameData.length - 1); i > -1; i--) {
-        console.log(11)
         // 判斷是否為和值的走勢圖
         let winNo
         if (this.btns.length !== 0) {
@@ -226,6 +223,8 @@ export default {
 <style lang="scss" scoped>
 .trend-el{
   background: #fff;
+  width: 1200px;
+  margin: auto;
 }
 .winNo-title{
   padding: 0rem .2rem;
@@ -240,6 +239,7 @@ export default {
   }
 }
 .top-description{
+  text-align: left;
   padding: .2rem .2rem;
   span:first-child{
     color: #333;
@@ -305,6 +305,7 @@ export default {
 }
 
 .center-description{
+  text-align: left;
   padding: 0rem .2rem .1rem;
   span:first-child{
     color: #f02f22;
