@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === "production" ? "/vue-trend" : "/",
+  publicPath: process.env.NODE_ENV === "production" ? "/vue-trend/dist/" : "",
   outputDir: 'dist',
   indexPath: 'index.html',
   filenameHashing: true,
